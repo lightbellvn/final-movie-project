@@ -3,11 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'popper.js/dist/umd/popper.min.js';
+import 'jquery/dist/jquery.min.js';
+import 'swiper/css/swiper.min.css';
+
+import {createStore, applyMiddleware} from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import myReducer from './redux/reducers';
+
+const store = createStore(
+  myReducer,
+  applyMiddleware(thunk)
+)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store = {store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

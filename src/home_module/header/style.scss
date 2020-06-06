@@ -1,0 +1,124 @@
+$bg_orange: rgb(255, 94, 0);
+$shadow_color: rgba(250, 7, 217, 0.3);
+$sign_color: rgb(160, 159, 159);
+.header_nav {
+  position: fixed;
+  position: relative;
+  top: -1px;
+  display: flex;
+  box-shadow: 0 0 15px $shadow_color;
+  height: 60px;
+  width: 100%;
+
+  .logo {
+    font-size: 30px;
+    line-height: 50px;
+    font-style: italic;
+    .first_char {
+      font-size: 50px;
+      color: $bg_orange;
+    }
+  }
+  .menu {
+    display: block;
+    line-height: 70px;
+    margin-left: 330px;
+    ul {
+      display: flex;
+      list-style: none;
+      li {
+        padding-left: 20px;
+        a {
+          &:hover {
+            font-size: 18px;
+            color: red;
+            text-decoration: none;
+            line-height: 60px;
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+  .sign {
+    display: block;
+    position: absolute;
+    right: 30px;
+    line-height: 70px;
+    font-size: 16px;
+  }
+  .menu_icon {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .header_nav {
+    position: fixed;
+    position: relative;
+    top: -1px;
+    display: flex;
+    box-shadow: 0 0 15px $shadow_color;
+    height: 30px;
+    width: 100%;
+
+    .logo {
+      font-size: 15px;
+      line-height: 25px;
+      font-style: italic;
+      .first_char {
+        font-size: 25px;
+        color: $bg_orange;
+      }
+    }
+    .menu {
+      display: none;
+    }
+    .sign {
+      display: none;
+    }
+    .menu_icon {
+      display: block;
+      position: absolute;
+      right: 15px;
+      line-height: 30px;
+      font-size: 18px;
+      button {
+        padding: 5px !important;
+        line-height: 5px !important;
+        margin-right: 10px;
+        color: $sign_color;
+        font-size: 13px;
+      }
+    }
+  }
+}
+#menuModal {
+  background-color: rgba(255, 255, 255, 0.774);
+  padding: 0 0 0 0 !important;
+  margin-left: 40px !important;
+  
+  .modal_content_1 {
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0, 247, 255, 0.1);
+    font-size: 18px;
+    text-align: center;
+
+  }
+  .modal_content_2 {
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(76, 0, 255, 0.05);
+    font-size: 18px;
+    text-align: center;
+  }
+  .modal_content_3 {
+    margin-top: 60px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0, 0, 0, 0.39);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+}
